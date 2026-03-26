@@ -1,0 +1,9 @@
+# GPU environment (CUDA 12.1 wheels)
+--index-url https://download.pytorch.org/whl/cu121
+--extra-index-url https://pypi.org/simple
+
+torch
+numpy
+h5py
+matplotlib
+tqdm
