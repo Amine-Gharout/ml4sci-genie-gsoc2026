@@ -2,7 +2,7 @@
 
 Evaluation notebook for the GENIE project under ML4SCI GSoC 2026.
 
-## Tasks completed
+## Tasks 
 - Common Task 1: CNN Autoencoder on quark/gluon jet images
 - Common Task 2: Graph construction + GNN classification
 - Specific Task 1: Contrastive learning for graph-level classification (GENIE1)
@@ -11,5 +11,3 @@ Evaluation notebook for the GENIE project under ML4SCI GSoC 2026.
 ## Dataset
 Quark/Gluon jet events — 3 channels (ECAL, HCAL, Tracks), 125×125 images.
 
-## Author
-Amine Gharout — ESI Algiers
