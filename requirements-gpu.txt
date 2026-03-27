@@ -1,9 +1,28 @@
-# GPU environment (CUDA 12.1 wheels)
---index-url https://download.pytorch.org/whl/cu121
---extra-index-url https://pypi.org/simple
+# Requirements for GPU-accelerated PyTorch + PyG Environment (Colab / Linux)
 
-torch
-numpy
+# 1. First, install base libraries
 h5py
+numpy<2.0.0
+scikit-learn
 matplotlib
 tqdm
+nbformat
+jupyter
+
+# 2. PyTorch (Installing the latest stable PyTorch 2.5.1 with CUDA 12.4 by default)
+--extra-index-url https://download.pytorch.org/whl/cu124
+torch==2.5.1
+torchvision==0.20.1
+torchaudio==2.5.1
+
+# 3. PyTorch Geometric Core
+torch_geometric
+
+# 4. CRITICAL: PyG C++ Extensions (Must strictly align with PyTorch 2.5.1 + CUDA 12.4)
+# They MUST be downloaded from the pre-built PyG wheels hub, otherwise pip tries 
+# to build them from C++ source files (which causes the "Failed to build wheel" error).
+--find-links https://data.pyg.org/whl/torch-2.5.1+cu124.html
+torch_scatter
+torch_sparse
+torch_cluster
+torch_spline_conv
